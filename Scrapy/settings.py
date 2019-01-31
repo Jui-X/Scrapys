@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 # Scrapy settings for Scrapy project
 #
 # For simplicity, this file contains only settings considered important or
@@ -116,15 +118,21 @@ USER_AGENTS = [
 ]
 
 MYSQL_HOST = "localhost"
-MYSQL_DBNAME = "car"
+MYSQL_DBNAME = "ours"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "123456"
 
 ITEM_PIPELINES = {
     # 'Scrapy.pipelines.BookMysqlTwistedPipeline': 3,
     # 'Scrapy.pipelines.ReviewMysqlTwistedPipeline': 2,
-    'Scrapy.pipelines.CarMysqlTwistedPipeline': 1
+    'Scrapy.pipelines.CarMysqlTwistedPipeline': 4,
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+    # 'Scrapy.pipelines.ProductImagePipeline': 5,
 }
+IMAGES_URLS_FIELD = "img_url"
+proj_url = os.path.abspath(os.path.dirname(__file__))
+IMAGES_STORE = os.path.join(proj_url, 'imgs')
+
 
 DOWNLOAD_DELAY = 10
 # Enable and configure the AutoThrottle extension (disabled by default)

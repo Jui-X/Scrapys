@@ -3,7 +3,7 @@ import re
 from scrapy.http import Request
 from urllib import parse
 
-from testScrapy.items import DoubanReviewItem
+from Scrapy.items import DoubanReviewItem
 from scrapy.loader import ItemLoader
 
 

@@ -8,10 +8,21 @@
 import MySQLdb
 import MySQLdb.cursors
 from twisted.enterprise import adbapi
+from scrapy.pipelines.images import ImagesPipeline
 
 
 class ScrapyPipeline(object):
     def process_item(self, item, spider):
+        return item
+
+
+class ProductImagePipeline(ImagesPipeline):
+    def item_completed(self, results, item, info):
+        if "img_url" in item:
+            for ok, value in item:
+                img_path = value["path"]
+            item["img_path"] = img_path
+
         return item
 
 
@@ -45,7 +56,7 @@ class CarMysqlTwistedPipeline(object):
 
     def do_insert(self, cursor, item):
         insert_sql = """
-            insert into audia4l(tag, comment)
-            VALUES (%s, %s)
+            insert into nj_museum(name, price, specification, texture, img_url)
+            VALUES (%s, %s, %s, %s, %s)
         """
-        cursor.execute(insert_sql, (item["tag"], item["comment"]))
+        cursor.execute(insert_sql, (item["name"], item["price"], item["specification"], item["texture"], item["img_url"]))
