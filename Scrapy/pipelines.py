@@ -56,7 +56,7 @@ class CarMysqlTwistedPipeline(object):
 
     def do_insert(self, cursor, item):
         insert_sql = """
-            insert into nj_museum(name, price, specification, texture, img_url)
-            VALUES (%s, %s, %s, %s, %s)
+            insert into ah_museum(name, specification, introduction, img_url)
+            VALUES (%s, %s, %s, %s)
         """
-        cursor.execute(insert_sql, (item["name"], item["price"], item["specification"], item["texture"], item["img_url"]))
+        cursor.execute(insert_sql, (item["name"], item["specification"], item["introduction"], item["img_url"]))

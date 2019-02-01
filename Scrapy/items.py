@@ -43,12 +43,19 @@ class DoubanReviewItem(scrapy.Item):
     )
 
 
-class ProductItem(scrapy.Item):
+class NJProductItem(scrapy.Item):
     name = scrapy.Field()
     price = scrapy.Field()
     sales = scrapy.Field()
     specification = scrapy.Field()
     texture = scrapy.Field()
     weight = scrapy.Field()
+    introduction = scrapy.Field()
+    img_url = scrapy.Field()
+
+
+class AHProductItem(scrapy.Item):
+    name = scrapy.Field()
+    specification = scrapy.Field()
     introduction = scrapy.Field()
     img_url = scrapy.Field()

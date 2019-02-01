@@ -4,7 +4,7 @@ from urllib import parse
 
 from scrapy.loader import ItemLoader
 
-from Scrapy.items import ProductItem
+from Scrapy.items import NJProductItem
 
 
 class Nj_museumSpider(scrapy.Spider):
@@ -14,8 +14,8 @@ class Nj_museumSpider(scrapy.Spider):
 
     def parse(self, response):
         items = response.css('.pub_right .shopclass .shop li a::attr(href)').extract()
+        base_url = "http://www.njmuseum.com/html"
         for item in items:
-            base_url = "http://www.njmuseum.com/html"
             yield Request(url=parse.urljoin(base_url, item), callback=self.parse_detailed)
 
         next_url = response.css('.list_page tr td a::attr(href)').extract()[-2]
@@ -23,7 +23,7 @@ class Nj_museumSpider(scrapy.Spider):
             yield Request(url=parse.urljoin(base_url, next_url), callback=self.parse)
 
     def parse_detailed(self, response):
-        product_item = ProductItem()
+        product_item = NJProductItem()
         info = response.css('.shop_other li label::text').extract()
         img_url = response.css('.shop_show .shop_img img::attr(src)').extract()
         name = info[0]
@@ -31,7 +31,7 @@ class Nj_museumSpider(scrapy.Spider):
         texture = info[2]
         price = info[3]
 
-        item_loader = ItemLoader(item=ProductItem(), response=response)
+        item_loader = ItemLoader(item=NJProductItem(), response=response)
         item_loader.add_value("name", name)
         item_loader.add_value("specification", specification)
         item_loader.add_value("texture", texture)
