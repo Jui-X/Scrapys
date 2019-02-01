@@ -26,7 +26,8 @@ class Nj_museumSpider(scrapy.Spider):
         product_item = AHProductItem()
 
         name = response.css('.maindetail .title h1::text').extract()
-        specification = response.css('.maindetail .cont p::text').extract()[1]
+        specification = response.css('.maindetail .cont p::text').extract()[0].split('：')
+        specification = specification[1]
         introduction = response.css('.maindetail .cont p::text').extract()[-1]
         img_url = response.css('.wcdetail .imgfull a img::attr(src)').extract()
 
