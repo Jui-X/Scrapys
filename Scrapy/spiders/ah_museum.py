@@ -7,7 +7,7 @@ from scrapy.loader import ItemLoader
 from Scrapy.items import AHProductItem
 
 
-class Nj_museumSpider(scrapy.Spider):
+class Ah_museumSpider(scrapy.Spider):
     name = "ah_museum"
     allowed_domains = ['www.ahm.cn']
     start_urls = ['http://www.ahm.cn/Service/ArtGoods/whcycp#page=1']
