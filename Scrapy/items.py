@@ -61,8 +61,11 @@ class AHProductItem(scrapy.Item):
     img_url = scrapy.Field()
 
 
-class HBProductItem(scrapy.item):
+class HBProductItem(scrapy.Item):
     name = scrapy.Field()
+    specification = scrapy.Field()
+    introduction = scrapy.Field()
+    img_url = scrapy.Field()
 
 
 class QXLProductItem(scrapy.Item):

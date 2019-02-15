@@ -24,4 +24,7 @@ class ZHSSpider(scrapy.Spider):
             yield Request(url=parse.urljoin(base_page_url, next_url), callback=self.parse)
 
     def parse_detailed(self, response):
+        product_item = ZHSProductItem()
+
+        
         

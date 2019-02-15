@@ -8,7 +8,7 @@ from scrapy.loader import ItemLoader
 
 
 class DoubanSpider(scrapy.Spider):
-    name = 'douban_book'
+    name = 'douban_all_book'
     allowed_domains = ['book.douban.com']
     start_urls = ['https://book.douban.com/tag/?view=cloud']
 
@@ -57,9 +57,9 @@ class DoubanSpider(scrapy.Spider):
         item_loader.add_css("title", "#wrapper h1 span::text")
         item_loader.add_value("author", authors)
         item_loader.add_value("publishing_house", publishing_house)
-        item_loader.add_css("rating", ".rating_self strong::text")
-        item_loader.add_css("tag", ".indent span .tag::text")
-        item_loader.add_value("rec_book", rec_book_list)
+        # item_loader.add_css("rating", ".rating_self strong::text")
+        # item_loader.add_css("tag", ".indent span .tag::text")
+        # item_loader.add_value("rec_book", rec_book_list)
 
         book_item = item_loader.load_item()
 

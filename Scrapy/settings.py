@@ -118,7 +118,7 @@ USER_AGENTS = [
 ]
 
 MYSQL_HOST = "localhost"
-MYSQL_DBNAME = "ours"
+MYSQL_DBNAME = "scrapy_mysql"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "123456"
 
