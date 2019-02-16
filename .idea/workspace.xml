@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6854256f-af0d-468a-b58d-3e0eaa5ced4c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scrapy/tools/crawl_xici.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapy/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrapy/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrapy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scrapy/spiders/zhs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/spiders/zhs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,22 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ah_museum.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/spiders/ah_museum.py">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="124">
+              <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+              <folding>
+                <element signature="e#194#208#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
+      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="58" column="39" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="39" />
+            <state relative-caret-position="1246">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
               <folding>
-                <element signature="e#194#208#0" expanded="true" />
+                <element signature="e#169#195#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crawl_xici.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/tools/crawl_xici.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,7 +61,7 @@
       <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="906">
               <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
               <folding>
                 <element signature="e#153#166#0" expanded="true" />
@@ -61,8 +73,8 @@
       <file leaf-file-name="douban_book.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="48" column="48" lean-forward="true" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+            <state>
+              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -80,16 +92,16 @@
         <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+              <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scrapy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="132" column="53" lean-forward="true" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
+            <state relative-caret-position="229">
+              <caret line="104" column="62" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -98,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
-              <caret line="26" column="74" lean-forward="true" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+              <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -124,7 +136,6 @@
         <option value="$PROJECT_DIR$/Scrapy/spiders/car.py" />
         <option value="$PROJECT_DIR$/Scrapy/myMiddlewares.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/douban_review.py" />
-        <option value="$PROJECT_DIR$/Scrapy/middlewares.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/nj_museum.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/qxl.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/ah_museum.py" />
@@ -134,8 +145,10 @@
         <option value="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Scrapy/items.py" />
-        <option value="$PROJECT_DIR$/Scrapy/pipelines.py" />
         <option value="$PROJECT_DIR$/Scrapy/settings.py" />
+        <option value="$PROJECT_DIR$/Scrapy/middlewares.py" />
+        <option value="$PROJECT_DIR$/Scrapy/tools/crawl_xici.py" />
+        <option value="$PROJECT_DIR$/Scrapy/pipelines.py" />
       </list>
     </option>
   </component>
@@ -155,6 +168,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,13 +185,12 @@
               <item name="Scrapys" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scrapys" type="462c0819:PsiDirectoryNode" />
               <item name="Scrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,11 +301,11 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3266762" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3266762" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32905984" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16152816" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16353887" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -333,18 +346,21 @@
           <line>41</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapy/pipelines.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapy/pipelines.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/car.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -580,16 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding>
-            <element signature="e#168#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/spiders/nj_museum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -630,23 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="26" column="74" lean-forward="true" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/ah_museum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -656,21 +645,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="48" column="48" lean-forward="true" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+        <state>
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="906">
           <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
           <folding>
             <element signature="e#153#166#0" expanded="true" />
@@ -678,20 +667,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/ah_museum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="39" />
+        <state relative-caret-position="17">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
           <folding>
-            <element signature="e#194#208#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1246">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="132" column="53" lean-forward="true" selection-start-line="132" selection-start-column="53" selection-end-line="132" selection-end-column="53" />
+        <state relative-caret-position="229">
+          <caret line="104" column="62" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/tools/crawl_xici.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
