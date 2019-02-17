@@ -9,14 +9,14 @@ cursor = conn.cursor()
 def crwal_ips():
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"}
     for i in range(3593):
-        re = requests.get("http://www.xicidaili.com/nn/{0}".format(i), headers=headers)
+        re = requests.get("https://www.xicidaili.com/nn/{0}".format(i), headers=headers)
 
         selector = Selector(text=re.text)
         all_attrs = selector.css("#ip_list tr")
 
         ip_list = []
-        for attrs in all_attrs:
-            speed_str = attrs.css(".bar::attr(title)").extract()
+        for attrs in all_attrs[1:]:
+            speed_str = attrs.css(".bar::attr(title)").extract()[0]
             if speed_str:
                 speed = float(speed_str.split("秒")[0])
 
@@ -26,7 +26,7 @@ def crwal_ips():
             port = attr[1]
             proxy_type = attr[5]
 
-            ip_list.append(ip, port, proxy_type, speed)
+            ip_list.append((ip, port, proxy_type, speed))
 
         for ip_info in ip_list:
             cursor.execute(
@@ -38,7 +38,7 @@ def crwal_ips():
 
 
 class GetIP(object):
-    def get_random_ip(self, ip):
+    def get_random_ip(self):
         random_sql = """
                 SELECT ip, port FROM ip_proxy
                 ORDER BY RAND()
@@ -89,6 +89,6 @@ class GetIP(object):
 
 
 if __name__ == "__main__":
-    # crwal_ips()
-    get_ip = GetIP()
-    get_ip.get_random_ip()
+    crwal_ips()
+    # get_ip = GetIP()
+    # get_ip.get_random_ip()
