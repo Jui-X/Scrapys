@@ -21,7 +21,7 @@ class CarItem(scrapy.Item):
 
 
 class DoubanBookItem(scrapy.Item):
-    ISBN = scrapy.Field()
+    id = scrapy.Field()
     title = scrapy.Field()
     author = scrapy.Field(
         output_processor=Join(",")

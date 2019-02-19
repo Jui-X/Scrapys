@@ -5,10 +5,12 @@ import MySQLdb
 conn = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="xici_ip", charset="utf8")
 cursor = conn.cursor()
 
+headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"}
 
-def crwal_ips():
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"}
-    for i in range(3593):
+
+def crawl_ips():
+
+    for i in range(30):
         re = requests.get("https://www.xicidaili.com/nn/{0}".format(i), headers=headers)
 
         selector = Selector(text=re.text)
@@ -89,6 +91,6 @@ class GetIP(object):
 
 
 if __name__ == "__main__":
-    crwal_ips()
+    crawl_ips()
     # get_ip = GetIP()
     # get_ip.get_random_ip()
