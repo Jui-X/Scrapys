@@ -56,7 +56,9 @@ class CarMysqlTwistedPipeline(object):
 
     def do_insert(self, cursor, item):
         insert_sql = """
-            insert into ip_proxy(ip, port, proxy_type, speed)
-            VALUES (%s, %s, %s, %f)
+            insert into book(douban_id, title, author, publishing_house, rating, tag, description, rec_book)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
-        cursor.execute(insert_sql, (item["ip"], item["port"], item["proxy_type"], item["speed"]))
+        cursor.execute(insert_sql, (item["douban_id"], item["title"], item["author"], item["publishing_house"],
+                                    item['rating'], item['tag'], item['description'], item['rec_book']))
+

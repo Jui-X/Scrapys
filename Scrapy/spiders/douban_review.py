@@ -3,7 +3,7 @@ import re
 from scrapy.http import Request
 from urllib import parse
 
-from Scrapy.items import DoubanReviewItem
+from Scrapy.items import DoubanBookItem
 from scrapy.loader import ItemLoader
 
 
@@ -32,7 +32,7 @@ class DoubanSpider(scrapy.Spider):
         #     yield Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
 
     def parse_detailed(self, response):
-        book_item = DoubanReviewItem()
+        book_item = DoubanBookItem()
 
         book_title = response.css('#wrapper h1 span::text').extract()[0]
 
@@ -42,13 +42,13 @@ class DoubanSpider(scrapy.Spider):
             yield Request(url=reviews[i], meta={"book_title": book_title}, dont_filter=True, callback=self.review_detailed)
 
     def review_detailed(self, response):
-        review_item = DoubanReviewItem()
+        review_item = DoubanBookItem()
 
         book_title = response.meta["book_title"]
         review_content = response.css('.review-content::text').extract()
         review_content[0].replace('\n', '').strip()
 
-        item_loader = ItemLoader(item=DoubanReviewItem(), response=response)
+        item_loader = ItemLoader(item=DoubanBookItem(), response=response)
         item_loader.add_value("review", review_content)
         item_loader.add_value("title", book_title)
 

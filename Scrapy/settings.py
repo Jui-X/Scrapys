@@ -95,7 +95,7 @@ DOWNLOADER_MIDDLEWARES = {
 	# 'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 90,
 	# 'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
     'Scrapy.middlewares.RandomUserAgentMiddlewares': 345,
-
+    'Scrapy.middlewares.RandomProxyMiddlewares': 500
 }
 
 USER_AGENTS = [
@@ -120,7 +120,7 @@ USER_AGENTS = [
 RANDOM_UA_TYPE = "random"
 
 MYSQL_HOST = "localhost"
-MYSQL_DBNAME = "scrapy_mysql"
+MYSQL_DBNAME = "readme"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "123456"
 
@@ -135,8 +135,7 @@ IMAGES_URLS_FIELD = "img_url"
 proj_url = os.path.abspath(os.path.dirname(__file__))
 IMAGES_STORE = os.path.join(proj_url, 'imgs')
 
-
-DOWNLOAD_DELAY = 10
+DOWNLOAD_DELAY = 5
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # NOTE: AutoThrottle will honour the standard settings for concurrency and delay
@@ -144,6 +143,6 @@ AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 AUTOTHROTTLE_START_DELAY = 3
 # The maximum download delay to be set in case of high latencies
-AUTOTHROTTLE_MAX_DELAY = 12
+AUTOTHROTTLE_MAX_DELAY = 10
 # Enable showing throttling stats for every response received:
 #AUTOTHROTTLE_DEBUG=False

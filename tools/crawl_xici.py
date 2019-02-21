@@ -52,19 +52,28 @@ class GetIP(object):
             ip = ip_info[0]
             port = ip_info[1]
 
-            judge_re = self.judge_ip(ip, port)
-            if judge_re:
-                return "http://{0}:{1}".format(ip, port)
-            else:
-                return self.get_random_ip()
+            # proxy_url = "http://{0}:{1}".format(ip, port)
+            # proxy_dict = {
+            #     "http": proxy_url,
+            #     "https": proxy_url
+            # }
+            # r = requests.get('http://httpbin.org/ip', proxies=proxy_dict)
+            # print(r.text)
 
-    def judge_ip(self, ip ,port):
-        http_url = "http://www.baidu.com"
+            # judge_re = self.judge_ip(ip, port)
+            # if judge_re:
+            return "http://{0}:{1}".format(ip, port)
+            # else:
+            #     return self.get_random_ip()
+
+    def judge_ip(self, ip, port):
+        http_url = "https://www.baidu.com"
         proxy_url = "http://{0}:{1}".format(ip, port)
 
         try:
             proxy_dict = {
-                "http": proxy_url
+                "http": proxy_url,
+                "https": proxy_url
             }
             response = requests.get(http_url, proxies=proxy_dict)
         except Exception as e:
@@ -72,7 +81,7 @@ class GetIP(object):
             self.delete_ip(ip)
             return False
         else:
-            code = response.status.code
+            code = response.status_code
             if code >= 200 and code < 300:
                 print("effective ip")
                 return True
@@ -87,7 +96,7 @@ class GetIP(object):
         """.format(ip)
         cursor.execute(delete_sql)
         conn.commit()
-        return  True
+        return True
 
 
 if __name__ == "__main__":

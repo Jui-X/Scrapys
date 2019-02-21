@@ -21,7 +21,7 @@ class CarItem(scrapy.Item):
 
 
 class DoubanBookItem(scrapy.Item):
-    id = scrapy.Field()
+    douban_id = scrapy.Field()
     title = scrapy.Field()
     author = scrapy.Field(
         output_processor=Join(",")
@@ -31,16 +31,24 @@ class DoubanBookItem(scrapy.Item):
     tag = scrapy.Field(
         output_processor=Join(",")
     )
+    description = scrapy.Field(
+        output_processor=Join(",")
+    )
     rec_book = scrapy.Field(
         output_processor=Join(",")
     )
-
-
-class DoubanReviewItem(scrapy.Item):
-    title = scrapy.Field()
     review = scrapy.Field(
         output_processor=Join(",")
     )
+
+
+class DoubanAllBookItem(scrapy.Item):
+    douban_id = scrapy.Field()
+    title = scrapy.Field()
+    author = scrapy.Field(
+        output_processor=Join(",")
+    )
+    publishing_house = scrapy.Field()
 
 
 class NJProductItem(scrapy.Item):

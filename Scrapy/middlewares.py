@@ -4,6 +4,8 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import random
+import base64
 
 from scrapy import signals
 from fake_useragent import UserAgent
@@ -107,25 +109,49 @@ class ScrapyDownloaderMiddleware(object):
 
 
 class RandomUserAgentMiddlewares(object):
-    """随机更换用户代理"""
+    # """随机更换用户代理"""
+    #
+    # def __init__(self, crawler):
+    #     super(RandomUserAgentMiddlewares, self).__init__()
+    #     self.ua = UserAgent()
+    #     self.ua_type = crawler.setting.get("RANDOM_UA_TYPE", "random")
+    #
+    # @classmethod
+    # def from_crawler(cls, crawler):
+    #     return cls(crawler)
+    #
+    # def process_request(self, request, spider):
+    #     def get_ua():
+    #         return getattr(self.ua, self.ua_type)
+    #
+    #     request.headers.setdefault('User-Agent', get_ua())
 
-    def __init__(self, crawler):
-        super(RandomUserAgentMiddlewares, self).__init__()
-        self.ua = UserAgent()
-        self.ua_type = crawler.setting.get("RANDOM_UA_TYPE", "random")
+    """根据预定义的列表随机更换用户代理"""
+
+    def __init__(self, agents):
+        self.agents = agents
 
     @classmethod
     def from_crawler(cls, crawler):
-        return cls(crawler)
+        return cls(crawler.settings.getlist('USER_AGENTS'))
 
     def process_request(self, request, spider):
-        def get_ua():
-            return getattr(self.ua, self.ua_type)
+        request.headers.setdefault('User-Agent', random.choice(self.agents))
 
-        request.headers.setdefault('User-Agent', get_ua())
+
+# 代理服务器
+proxyServer = "http://http-dyn.abuyun.com:9020"
+
+# 代理隧道验证信息
+proxyUser = "HWM203KAW01P975D"
+proxyPass = "BDDA31E7166F7A5A"
+
+# for Python3
+proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPass), "ascii")).decode("utf8")
 
 
 class RandomProxyMiddlewares(object):
     def process_request(self, request, spider):
-        get_ip = GetIP()
-        request.meta["proxy"] = get_ip.get_random_ip()
+        # get_ip = GetIP()
+        request.meta["proxy"] = proxyServer
+        request.headers["Proxy-Authorization"] = proxyAuth
