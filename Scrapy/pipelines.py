@@ -46,19 +46,32 @@ class CarMysqlTwistedPipeline(object):
         return cls(dbpool)
 
     def process_item(self, item, spider):
+        item['review'].replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
+        str_rate = ''.join(item['rating'])
+        rate = float(str_rate)
+        if(rate >= 7.5):
         # 使用twisted将mysql插入变成异步执行
-        query = self.dbpool.runInteraction(self.do_insert, item)
-        query.addErrback(self.handle_error, item, spider)  # 处理异常
+            query = self.dbpool.runInteraction(self.do_insert, item)
+            query.addErrback(self.handle_error, item, spider)  # 处理异常
 
     def handle_error(self, failure, item, spider):
         # 处理异步插入的异常
         print(failure)
 
     def do_insert(self, cursor, item):
+        # insert_sql = """
+        #             insert into book_all(douban_id, title, author, publishing_house)
+        #             VALUES (%s, %s, %s, %s)
+        #         """
+        # cursor.execute(insert_sql, (item["douban_id"], item["title"], item["author"], item["publishing_house"]))
+        # insert_sql = """
+        #     insert into book(douban_id, title, author, publishing_house, rating, tag, description, rec_book)
+        #     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        # """
+        # cursor.execute(insert_sql, (item["douban_id"], item["title"], item["author"], item["publishing_house"],
+        #                             item['rating'], item['tag'], item['description'], item['rec_book']))
         insert_sql = """
-            insert into book(douban_id, title, author, publishing_house, rating, tag, description, rec_book)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-        """
-        cursor.execute(insert_sql, (item["douban_id"], item["title"], item["author"], item["publishing_house"],
-                                    item['rating'], item['tag'], item['description'], item['rec_book']))
-
+                    insert into book_review(douban_id, review_content)
+                    VALUES (%s, %s)
+                """
+        cursor.execute(insert_sql, (item["douban_id"], item["review"]))

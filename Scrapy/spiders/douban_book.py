@@ -64,21 +64,25 @@ class DoubanSpider(scrapy.Spider):
         item_loader.add_value("description", description)
         item_loader.add_value("rec_book", rec_book_list)
 
-        reviews = response.css('.review-list .review-item h2 a::attr(href)').extract()
-        for i in range(0, 5):
-            # enter the review_url to crawl reviews
-            yield Request(url=reviews[i], meta={"item_loader": item_loader}, dont_filter=True,
-                          callback=self.review_detailed)
+        book_item = item_loader.load_item()
 
-    def review_detailed(self, response):
+        yield book_item
 
-        item_loader = response.meta["item_loader"]
-        review_content = response.css('.review-content::text').extract()
-        review_content[0].replace('\n', '').strip()
+        # reviews = response.css('.review-list .review-item h2 a::attr(href)').extract()
+        # for i in range(0, 5):
+        #     # enter the review_url to crawl reviews
+        #     yield Request(url=reviews[i], meta={"item_loader": item_loader}, dont_filter=True,
+        #                   callback=self.review_detailed)
 
-        item_loader.add_value("review", review_content)
-
-        review_item = item_loader.load_item()
-
-        yield review_item
+    # def review_detailed(self, response):
+    #
+    #     item_loader = response.meta["item_loader"]
+    #     review_content = response.css('.review-content::text').extract()
+    #     review_content[0].replace('\n', '').strip()
+    #
+    #     item_loader.add_value("review", review_content)
+    #
+    #     review_item = item_loader.load_item()
+    #
+    #     yield review_item
 

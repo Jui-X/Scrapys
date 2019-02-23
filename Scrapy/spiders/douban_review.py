@@ -3,7 +3,7 @@ import re
 from scrapy.http import Request
 from urllib import parse
 
-from Scrapy.items import DoubanBookItem
+from Scrapy.items import DoubanBookReviewItem
 from scrapy.loader import ItemLoader
 
 
@@ -25,32 +25,35 @@ class DoubanSpider(scrapy.Spider):
             book_info = post_node.css('.pub::text').extract()
             # rating_nums = post_node.css('.star .rating_nums::text').extract_first('')
             post_url = post_node.css('h2 a::attr(href)').extract_first('')
-            yield Request(url=post_url, meta={"book_info": book_info}, dont_filter=True, callback=self.parse_detailed)
+            douban_id = post_url.split('/', 5)[-2]
+            yield Request(url=post_url, meta={"book_info": book_info, "douban_id": douban_id}, dont_filter=True, callback=self.parse_detailed)
 
         # next_url = response.css('.next a::attr(href)').extract_first("")
         # if next_url:
         #     yield Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
 
     def parse_detailed(self, response):
-        book_item = DoubanBookItem()
 
-        book_title = response.css('#wrapper h1 span::text').extract()[0]
+        douban_id = response.meta["douban_id"]
 
+        rating = response.css('.rating_self strong::text').extract()[0].strip()
         reviews = response.css('.review-list .review-item h2 a::attr(href)').extract()
         for i in range(0, 5):
             # enter the review_url to crawl reviews
-            yield Request(url=reviews[i], meta={"book_title": book_title}, dont_filter=True, callback=self.review_detailed)
+            yield Request(url=reviews[i], meta={"douban_id": douban_id, "rating": rating}, dont_filter=True, callback=self.review_detailed)
 
     def review_detailed(self, response):
-        review_item = DoubanBookItem()
+        review_item = DoubanBookReviewItem()
 
-        book_title = response.meta["book_title"]
+        douban_id = response.meta["douban_id"]
+        rating = response.meta["rating"]
         review_content = response.css('.review-content::text').extract()
-        review_content[0].replace('\n', '').strip()
+        review_content[0].replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
 
-        item_loader = ItemLoader(item=DoubanBookItem(), response=response)
+        item_loader = ItemLoader(item=DoubanBookReviewItem(), response=response)
         item_loader.add_value("review", review_content)
-        item_loader.add_value("title", book_title)
+        item_loader.add_value("douban_id", douban_id)
+        item_loader.add_value("rating", rating)
 
         review_item = item_loader.load_item()
 

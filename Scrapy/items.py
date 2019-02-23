@@ -37,9 +37,6 @@ class DoubanBookItem(scrapy.Item):
     rec_book = scrapy.Field(
         output_processor=Join(",")
     )
-    review = scrapy.Field(
-        output_processor=Join(",")
-    )
 
 
 class DoubanAllBookItem(scrapy.Item):
@@ -49,6 +46,14 @@ class DoubanAllBookItem(scrapy.Item):
         output_processor=Join(",")
     )
     publishing_house = scrapy.Field()
+
+
+class DoubanBookReviewItem(scrapy.Item):
+    douban_id = scrapy.Field()
+    review = scrapy.Field(
+        output_processor=Join(",")
+    )
+    rating = scrapy.Field()
 
 
 class NJProductItem(scrapy.Item):
