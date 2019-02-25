@@ -32,18 +32,25 @@ def crawlABook(douban_id):
 
     review_url = selector.css('.review-list .review-item h2 a::attr(href)').extract()
     review_content = []
-    for i in range(0, 5):
+    for i in range(0, 10):
         review = requests.get(review_url[i], headers=headers)
         review_selector = Selector(text=review.text)
         reviews = review_selector.css('.review-content::text').extract()
+        new_review = []
         for review in reviews:
-            review_content.append(review.replace('\n', '').replace('\t', '').replace('\xa0', '').strip())
+            content = review.replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
+            if content != '':
+                new_review.append(content)
+        if new_review:
+            review_content.append(new_review)
 
     book = {'id': douban_id, 'title': title, 'rating': rating, 'tag': tag, 'description': description,
-            'rec_books': rec_books, 'review_content': review_content}
+            'rec_book_list': rec_book_list, 'review_content': review_content}
 
-    return book
+    print(book)
+    # return book
 
-# if __name__ == "__main__":
-#     crawlABook("4913064")
+
+if __name__ == "__main__":
+    crawlABook("4913064")
 
