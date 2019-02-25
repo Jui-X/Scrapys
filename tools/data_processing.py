@@ -14,7 +14,9 @@ def data_process():
     for result in results:
         if len(result[1]) <= 30:
             delete_review(result[0])
-        print(result[1])
+        else:
+            result[1].replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
+            update_review(result[0], result[1])
 
 
 def delete_review(review_id):
@@ -24,6 +26,20 @@ def delete_review(review_id):
     try:
         # 执行sql语句
         cursor.execute(delete_sql)
+        # 提交到数据库执行
+        conn.commit()
+    except:
+        # Rollback in case there is any error
+        conn.rollback()
+
+
+def update_review(review_id, review_content):
+    update_sql = """
+                UPDATE book_reivew SET review_content = %s WHERE review_id = %d
+    """ % (review_id, review_content)
+    try:
+        # 执行sql语句
+        cursor.execute(update_sql)
         # 提交到数据库执行
         conn.commit()
     except:

@@ -11,8 +11,6 @@ import MySQLdb
 
 def crawlABook(douban_id):
     # TODO
-    conn = MySQLdb.connect(host="localhost", user="root", passwd="123456", db="xici_ip", charset="utf8")
-    cursor = conn.cursor()
 
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0"}
 
@@ -30,27 +28,30 @@ def crawlABook(douban_id):
     for rec_book in rec_books:
         rec_book_list.append(rec_book.replace('\n', '').strip())
 
-    review_url = selector.css('.review-list .review-item h2 a::attr(href)').extract()
+    review_urls = selector.css('.review-list .review-item h2 a::attr(href)').extract()
     review_content = []
-    for i in range(0, 10):
-        review = requests.get(review_url[i], headers=headers)
-        review_selector = Selector(text=review.text)
-        reviews = review_selector.css('.review-content::text').extract()
-        new_review = []
-        for review in reviews:
-            content = review.replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
-            if content != '':
-                new_review.append(content)
-        if new_review:
-            review_content.append(new_review)
+    count = 0
+    for review_url in review_urls:
+        if review_url and count < 5:
+            review = requests.get(review_url, headers=headers)
+            review_selector = Selector(text=review.text)
+            reviews = review_selector.css('.review-content::text').extract()
+            new_review = []
+            for review in reviews:
+                content = review.replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
+                if content != '':
+                    new_review.append(content)
+            if new_review:
+                review_content.append(new_review)
+            count += 1
 
     book = {'id': douban_id, 'title': title, 'rating': rating, 'tag': tag, 'description': description,
             'rec_book_list': rec_book_list, 'review_content': review_content}
 
     print(book)
-    # return book
+    return book
 
 
 if __name__ == "__main__":
-    crawlABook("4913064")
+    crawlABook("1321017")
 
