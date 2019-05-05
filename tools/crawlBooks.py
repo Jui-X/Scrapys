@@ -20,6 +20,15 @@ def crawlABook(douban_id):
     selector = Selector(text=re.text)
     # link = selector.css('#wrapper h1 span::text').extract()
     title = selector.css('#wrapper h1 span::text').extract()[0]
+    if selector.css('#info span a::text').extract():
+        author = selector.css('#info span a::text').extract()[0].replace('\n', '').replace(' ', '')
+    if selector.css('#info a::text').extract():
+        author = selector.css('#info a::text').extract()[0].replace('\n', '').replace(' ', '')
+    i = 2
+    publishing_house = selector.css('#info::text').extract()[i]
+    while "\n" in publishing_house and selector.css('#info::text').extract()[i]:
+        i += 1
+        publishing_house = selector.css('#info::text').extract()[i]
     rating = selector.css('.rating_self strong::text').extract()[0].strip()
     tag = selector.css('.indent span .tag::text').extract()
     description = selector.css('.related_info .intro p::text').extract()[0:2]
@@ -35,7 +44,13 @@ def crawlABook(douban_id):
         if review_url and count < 5:
             review = requests.get(review_url, headers=headers)
             review_selector = Selector(text=review.text)
-            reviews = review_selector.css('.review-content::text').extract()
+            review_raw_content = review_selector.css('.review-content').extract()
+            if "<p>" in review_raw_content[0]:
+                reviews = review_selector.css('.review-content p::text').extract()
+                if "span" in review_raw_content[0]:
+                    reviews += review_selector.css('.review-content p span::text').extract()
+            else:
+                reviews = review_selector.css('.review-content::text').extract()
             new_review = []
             for review in reviews:
                 content = review.replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
@@ -45,7 +60,7 @@ def crawlABook(douban_id):
                 review_content.append(new_review)
             count += 1
 
-    book = {'id': douban_id, 'title': title, 'rating': rating, 'tag': tag, 'description': description,
+    book = {'id': douban_id, 'title': title, 'author': author, 'publishing_house': publishing_house, 'rating': rating, 'tag': tag, 'description': description,
             'rec_book_list': rec_book_list, 'review_content': review_content}
 
     print(book)
@@ -53,5 +68,5 @@ def crawlABook(douban_id):
 
 
 if __name__ == "__main__":
-    crawlABook("1321017")
+    crawlABook("6312377")
 

@@ -1,10 +1,10 @@
-import scrapy
-import re
-from scrapy.http import Request
 from urllib import parse
 
-from Scrapy.items import DoubanBookReviewItem
+import scrapy
+from scrapy.http import Request
 from scrapy.loader import ItemLoader
+
+from Scrapy.items import DoubanBookReviewItem
 
 
 class DoubanSpider(scrapy.Spider):
@@ -26,7 +26,8 @@ class DoubanSpider(scrapy.Spider):
             # rating_nums = post_node.css('.star .rating_nums::text').extract_first('')
             post_url = post_node.css('h2 a::attr(href)').extract_first('')
             douban_id = post_url.split('/', 5)[-2]
-            yield Request(url=post_url, meta={"book_info": book_info, "douban_id": douban_id}, dont_filter=True, callback=self.parse_detailed)
+            yield Request(url=post_url, meta={"book_info": book_info, "douban_id": douban_id}, dont_filter=True,
+                          callback=self.parse_detailed)
 
         # next_url = response.css('.next a::attr(href)').extract_first("")
         # if next_url:
@@ -40,7 +41,8 @@ class DoubanSpider(scrapy.Spider):
         reviews = response.css('.review-list .review-item h2 a::attr(href)').extract()
         for i in range(0, 5):
             # enter the review_url to crawl reviews
-            yield Request(url=reviews[i], meta={"douban_id": douban_id, "rating": rating}, dont_filter=True, callback=self.review_detailed)
+            yield Request(url=reviews[i], meta={"douban_id": douban_id, "rating": rating}, dont_filter=True,
+                          callback=self.review_detailed)
 
     def review_detailed(self, response):
         review_item = DoubanBookReviewItem()

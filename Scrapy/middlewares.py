@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import base64
 # Define here the models for your spider middleware
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 import random
-import base64
 
 from scrapy import signals
-from fake_useragent import UserAgent
-
-from tools.crawl_xici import GetIP
 
 
 class ScrapySpiderMiddleware(object):

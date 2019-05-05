@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6854256f-af0d-468a-b58d-3e0eaa5ced4c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Scrapys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Scrapys.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/settings.py___jb_tmp___" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapy/spiders/douban_review.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapy/spiders/douban_review.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/crawlBooks.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/crawlBooks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/data_processing.py" afterDir="false" />
     </list>
@@ -14,21 +26,21 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Scrapys$crawl_xici__1_.coverage" NAME="crawl_xici (1) Coverage Results" MODIFIED="1550393708766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/Scrapys$crawlBooks.coverage" NAME="crawlBooks Coverage Results" MODIFIED="1551099044867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/Scrapys$crawlBooks.coverage" NAME="crawlBooks Coverage Results" MODIFIED="1555905539404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/Scrapy$car.coverage" NAME="car Coverage Results" MODIFIED="1543814643972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapy/spiders" />
     <SUITE FILE_PATH="coverage/Scrapys$crawl_xici.coverage" NAME="crawl_xici Coverage Results" MODIFIED="1550394392186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/Scrapys$data_processing.coverage" NAME="data_processing Coverage Results" MODIFIED="1551095043353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/Scrapys$data_processing.coverage" NAME="data_processing Coverage Results" MODIFIED="1556813078208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/Scrapy$main.coverage" NAME="main Coverage Results" MODIFIED="1549017469429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Scrapys$book_requests.coverage" NAME="book_requests Coverage Results" MODIFIED="1550577210687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/Scrapys$main.coverage" NAME="main Coverage Results" MODIFIED="1550925852590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Scrapys$main.coverage" NAME="main Coverage Results" MODIFIED="1556765082693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="1241">
+              <caret line="76" column="71" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="71" />
               <folding>
                 <element signature="e#194#208#0" expanded="true" />
               </folding>
@@ -36,23 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawlBooks.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/crawlBooks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/data_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="515">
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -60,55 +60,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl_xici.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/crawl_xici.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+            <state relative-caret-position="85">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding>
+                <element signature="e#25#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="douban_book_review.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crawlBooks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/crawlBooks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="middlewares.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-              <folding>
-                <element signature="e#153#166#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="douban_book.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="70" column="88" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="douban_review.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,16 +100,10 @@
         <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="646">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#24#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,21 +136,22 @@
         <option value="$PROJECT_DIR$/Scrapy/spiders/ah_museum.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/hb_museum.py" />
         <option value="$PROJECT_DIR$/Scrapy/spiders/zhs.py" />
-        <option value="$PROJECT_DIR$/Scrapy/settings.py" />
         <option value="$PROJECT_DIR$/Scrapy/tools/crawl_xici.py" />
-        <option value="$PROJECT_DIR$/Scrapy/middlewares.py" />
-        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" />
         <option value="$PROJECT_DIR$/crawlBooks.py" />
         <option value="$PROJECT_DIR$/tools/book_requests.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tools/crawl_xici.py" />
-        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_review.py" />
         <option value="$PROJECT_DIR$/Scrapy/items.py" />
+        <option value="$PROJECT_DIR$/tools/crawlBooks.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_book.py" />
+        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_review.py" />
+        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py" />
+        <option value="$PROJECT_DIR$/Scrapy/middlewares.py" />
+        <option value="$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py" />
+        <option value="$PROJECT_DIR$/Scrapy/settings.py" />
         <option value="$PROJECT_DIR$/Scrapy/pipelines.py" />
         <option value="$PROJECT_DIR$/tools/data_processing.py" />
-        <option value="$PROJECT_DIR$/tools/crawlBooks.py" />
       </list>
     </option>
   </component>
@@ -184,10 +161,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="1940" />
-    <option name="height" value="1040" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,17 +193,24 @@
             <path>
               <item name="Scrapys" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scrapys" type="462c0819:PsiDirectoryNode" />
+              <item name="Scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Scrapys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scrapys" type="462c0819:PsiDirectoryNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DataMining" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -244,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crawlBooks">
+  <component name="RunManager" selected="Python.data_processing">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Scrapy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -368,9 +351,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.crawlBooks" />
         <item itemvalue="Python.data_processing" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.crawlBooks" />
         <item itemvalue="Python.book_requests" />
         <item itemvalue="Python.crawl_xici" />
       </list>
@@ -407,13 +390,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49932975" visible="true" weight="0.3266762" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49932975" weight="0.3266762" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3281027" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49788135" visible="true" weight="0.18632708" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.471564" visible="true" weight="0.17962466" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.50211865" side_tool="true" visible="true" weight="0.18632708" />
+      <window_info id="Structure" order="1" sideWeight="0.528436" side_tool="true" weight="0.17024128" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39800286" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -502,12 +485,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py</url>
-          <line>86</line>
+          <line>87</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py</url>
-          <line>76</line>
+          <line>77</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -517,13 +500,83 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tools/crawlBooks.py</url>
-          <line>50</line>
+          <line>65</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tools/crawlBooks.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/crawlBooks.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/crawlBooks.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py</url>
           <line>47</line>
-          <option name="timeStamp" value="53" />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/data_processing.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="122" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -533,31 +586,19 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="57" />
+      <option name="time" value="124" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>review_url</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/car.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -790,97 +831,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/settings.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" column="62" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="28271">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="70" column="88" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+        <state relative-caret-position="1207">
+          <caret line="71" column="88" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="88" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-          <folding>
-            <element signature="e#153#166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#194#208#0" expanded="true" />
+            <element signature="e#24#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/crawl_xici.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+        <state relative-caret-position="68">
+          <caret line="4" column="82" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="82" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python/Python36/Lib/site-packages/scrapy/core/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_review.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/crawlBooks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2329">
+          <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="e#25#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_all_book.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#24#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/spiders/douban_book_review.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scrapy/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="76" column="71" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="71" />
+          <folding>
+            <element signature="e#194#208#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/data_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="515">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/crawlBooks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

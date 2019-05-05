@@ -120,7 +120,7 @@ USER_AGENTS = [
 RANDOM_UA_TYPE = "random"
 
 MYSQL_HOST = "localhost"
-MYSQL_DBNAME = "readme"
+MYSQL_DBNAME = "scrapy_mysql"
 MYSQL_USER = "root"
 MYSQL_PASSWORD = "123456"
 
@@ -135,7 +135,7 @@ IMAGES_URLS_FIELD = "img_url"
 proj_url = os.path.abspath(os.path.dirname(__file__))
 IMAGES_STORE = os.path.join(proj_url, 'imgs')
 
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 1
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # NOTE: AutoThrottle will honour the standard settings for concurrency and delay

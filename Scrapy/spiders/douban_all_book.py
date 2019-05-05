@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-import scrapy
-from scrapy.http import Request
 from urllib import parse
 
-from Scrapy.items import DoubanAllBookItem
+import scrapy
+from scrapy.http import Request
 from scrapy.loader import ItemLoader
 
-import requests
+from Scrapy.items import DoubanAllBookItem
 
 
 class DoubanSpider(scrapy.Spider):
@@ -82,4 +81,3 @@ class DoubanSpider(scrapy.Spider):
     #     book_item = item_loader.load_item()
     #
     #     yield book_item
-

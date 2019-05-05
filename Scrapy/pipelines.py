@@ -46,13 +46,13 @@ class CarMysqlTwistedPipeline(object):
         return cls(dbpool)
 
     def process_item(self, item, spider):
-        item['review'].replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
-        str_rate = ''.join(item['rating'])
-        rate = float(str_rate)
-        if(rate >= 7.5):
+        # item['review'].replace('\n', '').replace('\t', '').replace('\xa0', '').strip()
+        # str_rate = ''.join(item['rating'])
+        # rate = float(str_rate)
+        # if(rate >= 7.5):
         # 使用twisted将mysql插入变成异步执行
-            query = self.dbpool.runInteraction(self.do_insert, item)
-            query.addErrback(self.handle_error, item, spider)  # 处理异常
+        query = self.dbpool.runInteraction(self.do_insert, item)
+        query.addErrback(self.handle_error, item, spider)  # 处理异常
 
     def handle_error(self, failure, item, spider):
         # 处理异步插入的异常
